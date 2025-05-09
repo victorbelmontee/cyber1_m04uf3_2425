@@ -1,0 +1,16 @@
+<p id="dato"></p>
+<script>
+
+fetch("http://10.65.0.70:8000/cgi-bin/rest.py")
+	.then(response => response.json())
+	.then(data => {
+		console.log(data);
+		var p = document.getElementById("dato")
+
+		p.innerHTML = data.variable;
+	});
+
+
+</script>
+
+<h1>Python!</h1>
